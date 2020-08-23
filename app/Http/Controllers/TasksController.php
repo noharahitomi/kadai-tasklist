@@ -49,7 +49,7 @@ class TasksController extends Controller
         ]);
         
         $request->validate([
-            'content' => 'required|max255',
+            'content' => 'required|max:255',
         ]);
         
         $task = new Task;
@@ -104,7 +104,7 @@ class TasksController extends Controller
         ]);
         
         $request->validate([
-            'content' => 'required|max255',
+            'content' => 'required|max:255',
         ]);
         
         $task = Task::FindOrFail($id);
